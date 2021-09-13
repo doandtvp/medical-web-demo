@@ -1,0 +1,112 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.header {
+  max-width: 1920px;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  background-color: $color-fff;
+  align-items: center;
+
+  .header-content {
+    box-sizing: border-box;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    width: 100%;
+
+    .search {
+      border-radius: 20px;
+      border: 1px solid $color-d3dfea;
+      width: 450px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 400px;
+        height: 38px;
+        margin-top: 0;
+        margin-left: 20px;
+        border: none;
+        padding: 0;
+        font-size: 16px;
+      }
+
+      input::placeholder {
+        font-size: 14px;
+        @include fw-400;
+        line-height: 16.41px;
+        color: $color-9bb1ca;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      i {
+        cursor: pointer;
+        font-size: 16px;
+        color: $color-9bb1ca;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      height: auto;
+
+      li {
+        height: 80px;
+        width: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          color: $color-165285;
+          text-decoration: none;
+          font-size: 16px;
+          line-height: 18.75px;
+          @include fw-400;
+        }
+      }
+
+      .active {
+        border-bottom: 1px solid $color-0259a3;
+      }
+    }
+
+    .admin {
+      display: flex;
+      align-items: center;
+      width: 110px;
+
+      .admin-avt {
+        width: 40px;
+        height: 40px;
+        border: 1px solid $color-eee;
+        color: $color-ccc;
+        background-color: $color-eee;
+        border-radius: 50%;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 18.75px;
+        @include fw-500;
+        color: $color-0259a3;
+        margin-left: 20px;
+      }
+    }
+  }
+}

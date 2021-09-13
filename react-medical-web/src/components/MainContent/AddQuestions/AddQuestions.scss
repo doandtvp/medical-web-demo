@@ -1,0 +1,156 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/mixins.scss';
+
+.add-questions {
+  @include container;
+
+  .content {
+    @include contents;
+
+    input {
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 28.13px;
+      color: $color-0259a3;
+      @include fw-500;
+      margin-top: 40px;
+      margin-bottom: 58px;
+    }
+
+    .selects {
+      width: 670px;
+
+      select {
+        width: 100%;
+        color: $color-333;
+        height: 50px;
+      }
+    }
+
+    .question-area {
+      width: 670px;
+      margin-top: 40px;
+      textarea {
+        width: 100%;
+        height: 100px;
+        border-radius: 5px;
+        margin-top: 5px;
+        border: 1px solid $color-d3dfea;
+      }
+
+      textarea::placeholder {
+        font-size: 16px;
+        line-height: 18.75px;
+        color: $color-333;
+        @include fw-400;
+        padding: 16px 0 0 19px;
+      }
+    }
+
+    .radios {
+      margin-top: 40px;
+      width: 670px;
+      height: auto;
+
+      .row {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .radio-items {
+        background: $color-fafcff;
+        border: 1px solid $color-d3dfea;
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 260px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 18.75px;
+        @include fw-400;
+        margin-right: 60px;
+
+        input {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .upload {
+      margin-top: 40px;
+      width: 670px;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid $color-d3dfea;
+        margin-top: 5px;
+      }
+
+      input {
+        width: 81%;
+        height: 50px;
+        background: $color-fff;
+        box-sizing: border-box;
+        border-radius: 5px;
+        margin: 0;
+      }
+
+      input[type='file']::file-selector-button {
+        display: none;
+      }
+
+      .choosen {
+        color: $color-333;
+        padding-top: 20px;
+      }
+
+      .select-file {
+        box-sizing: border-box;
+        padding: 11px 34.5px;
+        text-align: center;
+        color: $color-fff;
+        background: $color-1d93d1;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 18.75px;
+        cursor: pointer;
+      }
+    }
+
+    .recommendation {
+      width: 670px;
+      margin-top: 40px;
+
+      input {
+        width: 100%;
+        height: 50px;
+        background: $color-fff;
+        border: 1px solid $color-d3dfea;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+
+      input::placeholder {
+        text-indent: 20px;
+        font-size: 16px;
+        line-height: 18.75px;
+        color: $color-333;
+      }
+    }
+
+    .button-group {
+      width: 670px;
+      margin: 40px 0;
+    }
+  }
+}
