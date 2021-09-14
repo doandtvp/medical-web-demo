@@ -1,8 +1,11 @@
 import React from 'react';
 import './Notification.scss';
 import image from '../../../images/content_img.png';
+import Button from '../../UI/Button/Button';
 
 function Notification() {
+  const handleDownload = () => {};
+
   return (
     <div className='notification'>
       <div className='notification-content'>
@@ -57,7 +60,14 @@ function Notification() {
             specimen book. It has survived not only five centuries, but also the
             leap into electronic typesetting, remaining essentially unchanged.
           </p>
-          <button>Tải về</button>
+          <div className='download-button'>
+            <Button
+              type='button'
+              value='Tải về'
+              className='submit-button'
+              onHandleClick={handleDownload}
+            />
+          </div>
         </div>
       </div>
     </div>

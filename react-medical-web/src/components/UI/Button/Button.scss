@@ -1,0 +1,20 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/mixins.scss';
+
+button {
+  @include buttons;
+  @include fw-500;
+  margin-right: 30px;
+}
+
+.submit-button {
+  color: $color-fff;
+  border: 1px inset $color-fff;
+  background-color: $color-1d93d1;
+}
+
+.clear-button {
+  color: $color-1d93d1;
+  border: 1px inset $color-1d93d1;
+  background-color: $color-fff;
+}

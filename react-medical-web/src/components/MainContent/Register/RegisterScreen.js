@@ -1,11 +1,18 @@
 import React from 'react';
 import './RegisterScreen.scss';
 import logo from '../../../images/logo.png';
-import Buttons from '../../UI/Buttons/Buttons';
+import Button from '../../UI/Button/Button';
 import Input from '../../UI/Input/Input';
 import Select from '../../UI/Select/Select';
 
 function RegisterScreen() {
+  const companies = ['AHT', 'FPT', 'KSM'];
+  const roles = ['PM', 'Team Leader', 'CEO', 'Tester'];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className='resgister'>
       <img src={logo} alt='logo' />
@@ -40,19 +47,23 @@ function RegisterScreen() {
           <Select
             label='Tổ chức'
             placeholder='Chọn công ty'
-            option_1='AHT'
-            option_2='FPT'
+            options={companies}
           />
 
           <Select
             label='Vai trò'
             placeholder='Chọn chức danh'
-            option_1='PM'
-            option_2='Team Leader'
+            options={roles}
           />
         </div>
         <div className='button-group'>
-          <Buttons />
+          <Button type='reset' value='Xóa' className='clear-button' />
+          <Button
+            type='submit'
+            value='Đăng ký'
+            className='submit-button'
+            onHandleClick={handleSubmit}
+          />
         </div>
       </form>
     </div>
